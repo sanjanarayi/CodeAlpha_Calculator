@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+
+        <!-- Header -->
+        <div class="top-bar">
+
+            <h2>Scientific Calculator</h2>
+
+            <button id="theme-toggle">
+                🌙
+            </button>
+
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel">
+
+            <h3>History</h3>
+
+            <ul id="history-list">
+
+            </ul>
+
+        </div>
+
+        <!-- Display -->
+        <div class="display-container">
+
+            <input
+                type="text"
+                id="display"
+                readonly
+                placeholder="0"
+            >
+
+        </div>
+
+        <!-- Calculator Buttons -->
+        <div class="buttons">
+
+            <!-- Row 1 -->
+            <button onclick="appendFunction('sin(')">sin</button>
+            <button onclick="appendFunction('cos(')">cos</button>
+            <button onclick="appendFunction('tan(')">tan</button>
+            <button onclick="toggleMode()" id="angle-mode">
+                DEG
+            </button>
+            <button onclick="clearDisplay()">
+                AC
+            </button>
+
+            <!-- Row 2 -->
+            <button onclick="appendFunction('log(')">log</button>
+            <button onclick="appendFunction('ln(')">ln</button>
+            <button onclick="appendValue('(')">(</button>
+            <button onclick="appendValue(')')">)</button>
+            <button onclick="deleteLast()">
+                ⌫
+            </button>
+
+            <!-- Row 3 -->
+            <button onclick="appendFactorial()">
+                !
+            </button>
+            <button onclick="appendValue('%')">
+                %
+            </button>
+            <button onclick="appendValue('/')">
+                ÷
+            </button>
+            <button onclick="appendValue('^')">
+                xʸ
+            </button>
+            <button onclick="appendFunction('sqrt(')">
+                √
+            </button>
+
+            <!-- Row 4 -->
+            <button onclick="appendConstant('PI')">
+                π
+            </button>
+            <button onclick="appendConstant('E')">
+                e
+            </button>
+            <button onclick="appendValue('7')">
+                7
+            </button>
+            <button onclick="appendValue('8')">
+                8
+            </button>
+            <button onclick="appendValue('9')">
+                9
+            </button>
+
+            <!-- Row 5 -->
+            <button onclick="squareCurrent()">
+                x²
+            </button>
+            <button onclick="appendValue('*')">
+                ×
+            </button>
+            <button onclick="appendValue('4')">
+                4
+            </button>
+            <button onclick="appendValue('5')">
+                5
+            </button>
+            <button onclick="appendValue('6')">
+                6
+            </button>
+
+            <!-- Row 6 -->
+            <button onclick="appendValue('-')">
+                −
+            </button>
+            <button onclick="appendValue('1')">
+                1
+            </button>
+            <button onclick="appendValue('2')">
+                2
+            </button>
+            <button onclick="appendValue('3')">
+                3
+            </button>
+            <button onclick="copyResult()">
+                📋
+            </button>
+
+            <!-- Row 7 -->
+            <button onclick="appendValue('+')">
+                +
+            </button>
+            <button onclick="appendValue('00')">
+                00
+            </button>
+            <button onclick="appendValue('0')">
+                0
+            </button>
+            <button onclick="appendValue('.')">
+                .
+            </button>
+            <button
+                class="equals"
+                onclick="calculate()"
+            >
+                =
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
